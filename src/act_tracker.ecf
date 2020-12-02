@@ -1,0 +1,5 @@
+Description=Activity tracker-crmtogether.com
+Directory=act_tracker
+multipleinstalls=y
+errorhandling=strict
+Version=2018
