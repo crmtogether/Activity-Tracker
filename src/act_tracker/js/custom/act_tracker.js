@@ -37,9 +37,9 @@ function getSearchFields()
 			{
 				if (fields[i].tagName=="SELECT")
 				{
-					var _displayvalue=crm.getTrans(fields[i].id,fields[i].value);
-					if (fields[i].value=="sagecrm_code_all")
-						_displayvalue="All";
+					var _displayvalue=new String(fields[i].options[fields[i].selectedIndex].innerText);
+					_displayvalue=_displayvalue.trimLeft();
+					_displayvalue=_displayvalue.trimRight();
 					res+=_capt.innerText+ " "+ _displayvalue +'\n';
 				}else{
 					res+=_capt.innerText+ " "+ fields[i].value+'\n';
